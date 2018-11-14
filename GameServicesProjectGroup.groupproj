@@ -1,0 +1,120 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{6E23DEFF-F737-42C3-B8AD-2549B8F67C93}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="GameServicesServerApplication.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GameServicesServerFMXApplication.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GameServicesServerService.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GameServicesServerConsoleApplication.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GameServicesServerDaemon.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GameServicesServerApacheModule.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GameServicesServerISAPI.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GameServicesClient.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="GameServicesServerApplication">
+        <MSBuild Projects="GameServicesServerApplication.dproj"/>
+    </Target>
+    <Target Name="GameServicesServerApplication:Clean">
+        <MSBuild Projects="GameServicesServerApplication.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GameServicesServerApplication:Make">
+        <MSBuild Projects="GameServicesServerApplication.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GameServicesServerFMXApplication">
+        <MSBuild Projects="GameServicesServerFMXApplication.dproj"/>
+    </Target>
+    <Target Name="GameServicesServerFMXApplication:Clean">
+        <MSBuild Projects="GameServicesServerFMXApplication.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GameServicesServerFMXApplication:Make">
+        <MSBuild Projects="GameServicesServerFMXApplication.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GameServicesServerService">
+        <MSBuild Projects="GameServicesServerService.dproj"/>
+    </Target>
+    <Target Name="GameServicesServerService:Clean">
+        <MSBuild Projects="GameServicesServerService.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GameServicesServerService:Make">
+        <MSBuild Projects="GameServicesServerService.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GameServicesServerConsoleApplication">
+        <MSBuild Projects="GameServicesServerConsoleApplication.dproj"/>
+    </Target>
+    <Target Name="GameServicesServerConsoleApplication:Clean">
+        <MSBuild Projects="GameServicesServerConsoleApplication.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GameServicesServerConsoleApplication:Make">
+        <MSBuild Projects="GameServicesServerConsoleApplication.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GameServicesServerDaemon">
+        <MSBuild Projects="GameServicesServerDaemon.dproj"/>
+    </Target>
+    <Target Name="GameServicesServerDaemon:Clean">
+        <MSBuild Projects="GameServicesServerDaemon.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GameServicesServerDaemon:Make">
+        <MSBuild Projects="GameServicesServerDaemon.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GameServicesServerApacheModule">
+        <MSBuild Projects="GameServicesServerApacheModule.dproj"/>
+    </Target>
+    <Target Name="GameServicesServerApacheModule:Clean">
+        <MSBuild Projects="GameServicesServerApacheModule.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GameServicesServerApacheModule:Make">
+        <MSBuild Projects="GameServicesServerApacheModule.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GameServicesServerISAPI">
+        <MSBuild Projects="GameServicesServerISAPI.dproj"/>
+    </Target>
+    <Target Name="GameServicesServerISAPI:Clean">
+        <MSBuild Projects="GameServicesServerISAPI.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GameServicesServerISAPI:Make">
+        <MSBuild Projects="GameServicesServerISAPI.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GameServicesClient">
+        <MSBuild Projects="GameServicesClient.dproj"/>
+    </Target>
+    <Target Name="GameServicesClient:Clean">
+        <MSBuild Projects="GameServicesClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GameServicesClient:Make">
+        <MSBuild Projects="GameServicesClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="GameServicesServerApplication;GameServicesServerFMXApplication;GameServicesServerService;GameServicesServerConsoleApplication;GameServicesServerDaemon;GameServicesServerApacheModule;GameServicesServerISAPI;GameServicesClient"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="GameServicesServerApplication:Clean;GameServicesServerFMXApplication:Clean;GameServicesServerService:Clean;GameServicesServerConsoleApplication:Clean;GameServicesServerDaemon:Clean;GameServicesServerApacheModule:Clean;GameServicesServerISAPI:Clean;GameServicesClient:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="GameServicesServerApplication:Make;GameServicesServerFMXApplication:Make;GameServicesServerService:Make;GameServicesServerConsoleApplication:Make;GameServicesServerDaemon:Make;GameServicesServerApacheModule:Make;GameServicesServerISAPI:Make;GameServicesClient:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
