@@ -1,6 +1,6 @@
 # marsGameServices
 
-I wrote this REST server as a backend for RGBquick:
+I wrote this REST server as a backend for RGBquick:    
 https://play.google.com/store/apps/details?id=com.inmatrix.RGBquick
 
 The server recieves player scores (in JSON format) and returns a JSON result with the player's position in a global leaderboard.
