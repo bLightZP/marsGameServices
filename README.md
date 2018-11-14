@@ -9,4 +9,4 @@ The server also provides an access point that returns the entire leaderboard as 
 
 The submitted data is verified to be legitimate using a simple salted hash and by checking the client's user-agent.
 
-The REST procesisng code resides in 'Server.Resources.pas'.
+The REST processing code resides in 'Server.Resources.pas'.
