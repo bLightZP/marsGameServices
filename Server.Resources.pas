@@ -93,7 +93,7 @@ const
   RGBquickUserAgent       : String = 'RGBgreen Client/1.0';
   RGBquickLeaderboardPath : String = 'c:\RGBquick\';
   RGBquickLeaderboardFile : String = 'leaderboard.txt';
-  RGBquickHashSalt        : String = 'write something here to act as the Hash salt';
+  RGBquickHashSalt        : String = 'czvb7m#+a_xdbbn356casf56%fcxAqw4DsKHU';
   RGBquickLeaderboardSize : Integer = 10000; // maximum entries per leaderboard
 
 
@@ -226,7 +226,7 @@ begin
     RGBquickScoreCache.Clear;
     RGBquickLeaderboardToStringList(RGBquickScoreCache);
     Try
-      RGBquickScoreCache.SaveToFile(RGBquickLeaderboardPath+RGBquickLeaderboardFile);
+      RGBquickScoreCache.SaveToFile(RGBquickLeaderboardPath+RGBquickLeaderboardFile,TEncoding.UTF8);
       RGBquickScoreChanged := False;
     Except
       {$IFDEF TRACEDEBUG}AddDebugEntry('Exception trying to save RGBquick leaderboard to "'+RGBquickLeaderboardPath+RGBquickLeaderboardFile+'"');{$ENDIF}
